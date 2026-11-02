@@ -1,108 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ergo-S - AI-Powered Ergonomic Assessment</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-        .container {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-        }
-        h1 { color: #007AFF; margin-bottom: 10px; }
-        .tagline { color: #666; font-size: 18px; margin-bottom: 30px; }
-        .features { margin: 30px 0; }
-        .feature {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-        .feature-icon {
-            font-size: 24px;
-            margin-right: 15px;
-        }
-        .links {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
-        .links a {
-            display: inline-block;
-            margin-right: 20px;
-            color: #007AFF;
-            text-decoration: none;
-        }
-        .links a:hover { text-decoration: underline; }
-        .disclaimer {
-            margin-top: 30px;
-            padding: 15px;
-            background: #fff3cd;
-            border-radius: 10px;
-            font-size: 12px;
-            color: #856404;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ErgoSafe</title>
+<meta name="description" content="ErgoSafe scores workplace posture against RULA from a short video, entirely on your device.">
+<style>
+:root {
+  --bg: #ffffff;
+  --fg: #1c1c1e;
+  --muted: #6b6b70;
+  --rule: #e3e3e6;
+  --accent: #0a68d8;
+  --panel: #f7f7f9;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131315;
+    --fg: #f2f2f4;
+    --muted: #a1a1a8;
+    --rule: #2e2e32;
+    --accent: #5fa8ff;
+    --panel: #1d1d20;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 0 16px;
+  background: var(--bg);
+  color: var(--fg);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 44rem; margin: 0 auto; padding: 56px 0 96px; }
+header { border-bottom: 1px solid var(--rule); padding-bottom: 24px; margin-bottom: 32px; }
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; letter-spacing: -0.02em; }
+h2 { font-size: 1.2rem; margin: 40px 0 10px; letter-spacing: -0.01em; }
+h3 { font-size: 1rem; margin: 28px 0 6px; }
+p, li { color: var(--fg); }
+.lede, .muted { color: var(--muted); }
+.lede { font-size: 1.05rem; margin: 0; }
+a { color: var(--accent); }
+nav { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 20px; }
+nav a { text-decoration: none; font-weight: 600; }
+nav a:hover { text-decoration: underline; }
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin: 24px 0;
+}
+.panel p:first-child { margin-top: 0; }
+.panel p:last-child { margin-bottom: 0; }
+ul { padding-left: 1.25rem; }
+li { margin: 6px 0; }
+footer {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+code { background: var(--panel); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>Ergo-S</h1>
-        <p class="tagline">AI-Powered Ergonomic Risk Assessment</p>
+<div class="wrap">
+<header>
+  <h1>ErgoSafe</h1>
+  <p class="lede">Ergonomic risk assessment for iPhone and iPad.</p>
+  <nav>
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </nav>
+</header>
 
-        <p>Ergo-S uses advanced computer vision and the RULA (Rapid Upper Limb Assessment) methodology to analyze workplace postures and identify musculoskeletal disorder (MSD) risks in real-time.</p>
+<p>ErgoSafe turns a short video of someone working into a RULA ergonomic risk
+score, then helps you track the fix through to a verified re-assessment.</p>
 
-        <div class="features">
-            <div class="feature">
-                <span class="feature-icon">📹</span>
-                <div>
-                    <strong>Real-Time Analysis</strong>
-                    <p>Point your camera at a worker and get instant RULA scores and risk assessments.</p>
-                </div>
-            </div>
-            <div class="feature">
-                <span class="feature-icon">📊</span>
-                <div>
-                    <strong>Comprehensive Reports</strong>
-                    <p>Generate PDF reports with detailed body part risk breakdowns and recommendations.</p>
-                </div>
-            </div>
-            <div class="feature">
-                <span class="feature-icon">📁</span>
-                <div>
-                    <strong>Project Organization</strong>
-                    <p>Organize assessments into projects for different workstations, clients, or audits.</p>
-                </div>
-            </div>
-            <div class="feature">
-                <span class="feature-icon">🔒</span>
-                <div>
-                    <strong>Privacy First</strong>
-                    <p>All processing happens on-device. No data is sent to external servers.</p>
-                </div>
-            </div>
-        </div>
+<h2>What it does</h2>
+<ul>
+  <li>Scores neck, trunk, upper arm, lower arm, wrist and legs against the published RULA worksheet.</li>
+  <li>Reports how reliable each reading is: joint detection quality, joints that were not visible, and whether the camera angle suited the measurement.</li>
+  <li>Scores the worst sustained posture across the whole recording, not a single frame.</li>
+  <li>Raises corrective actions with an owner, due date and status, and links a later re-assessment to measure whether risk actually fell.</li>
+  <li>Exports to CSV or JSON, and generates per-project PDF reports.</li>
+</ul>
 
-        <div class="disclaimer">
-            <strong>Medical Disclaimer:</strong> Ergo-S is designed as a screening and educational tool for ergonomic assessment. It is not intended to diagnose, treat, cure, or prevent any medical condition. The RULA scores and risk assessments provided are estimates based on pose detection and should not replace professional ergonomic evaluations or medical advice. Always consult with qualified healthcare professionals and certified ergonomists before making decisions about workplace modifications or treatment. Users should seek a doctor's advice before making any medical decisions based on information from this app.
-        </div>
+<h2>Privacy</h2>
+<p>All analysis runs on your device using Apple's Vision framework. Nothing is
+uploaded, there are no accounts, and there is no analytics or advertising code.
+Assessments and recordings are encrypted at rest. See the
+<a href="privacy.html">Privacy Policy</a>.</p>
 
-        <div class="links">
-            <a href="support.html">Support</a>
-            <a href="privacy-policy.html">Privacy Policy</a>
-        </div>
+<div class="panel">
+  <p><strong>Medical disclaimer.</strong> ErgoSafe is a workplace screening tool.
+  It is not a medical device and does not provide a diagnosis or treatment advice.
+  Consult a doctor about any pain, injury or symptoms, and before making any
+  decisions about your health. Always confirm findings with a qualified ergonomist.</p>
+</div>
 
-        <p style="margin-top: 30px; font-size: 12px; color: #666;">© 2025 Ergo-S. All rights reserved.</p>
-    </div>
+<footer>
+  <p>Contact: <a href="mailto:narensunil03@gmail.com">narensunil03@gmail.com</a><br>
+  &copy; 2026 ErgoSafe. All rights reserved.</p>
+</footer>
+</div>
 </body>
 </html>
